@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    font-family: SF Pro Display, sans-serif;
+}
+
+.header {
+    margin: auto;  
+    background-color: #1f1f1f;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 80px;
+    width: 99%;
+    border-radius: 15px;
+}
+
+.header h1 {
+    color: #fff;
+    position: relative;
+    top: 45%;
+    transform: translateY(-45%);
+}
+
+.navbar {
+    margin: auto;
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 50px;
+    width: 99%;
+    border-radius: 15px;
+}
+
+.navbar ul {padding: 0;}
+
+.navbar input[type="text"] {
+    float: right;
+    padding: 6px;
+    width: 200px;
+    background-color: #2f2f2f;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    margin-top: 12px;
+}
+
+#navbar-search-btn {
+    float: right;
+    background-color: #2f2f2f;
+    border: none;
+    height: 35px;
+    border-radius: 8px;
+    transition: 0.5s;
+    margin-top: 7px;
+    margin-right: 10px;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+#navbar-search-btn i {
+    padding: 3px;
+    scale: 150%;
+    color: #fff;
+}
+
+#navbar-search-btn:hover {background-color: #66c0f4;}
+
+#logo {
+    color: #fff;
+    margin: 15px;
+    scale: 200%;
+    transition: 0.5s;
+}
+
+#logo:hover {
+    color: #66c0f4;
+}
+
+#navbar-item {
+    display: inline-block;
+}
+
+#navbar-item a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+#navbar-btn {
+    font-family: SF Pro Display, sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    background-color: #2f2f2f;
+    color: #fff;
+    border: none;
+    height: 35px;
+    border-radius: 8px;
+    transition: 0.5s;
+    margin: 0px 2px;
+}
+
+#navbar-btn:hover {background-color: #66c0f4;}
+
+#navbar-btn-install {
+    font-family: SF Pro Display, sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    background-color: green;
+    color: black;
+    border: none;
+    height: 35px;
+    border-radius: 8px;
+    transition: 0.5s;
+    margin: 0px 2px;
+}
+
+#navbar-btn-install:hover {background-color: #66c0f4;}
