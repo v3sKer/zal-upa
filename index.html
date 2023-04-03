@@ -9,19 +9,24 @@
 
 <body>
     <div class="header">
-        <h1>This is a heading.</h1>
+        <div class="headerLogo"><img id="logoHeader" src="./assets/img/logo_wide.png" alt="logo"></div>
     </div>
     <div class="navbar">
-        <ul>
-            <li id="navbar-item"><a href="#"><i class='bx bxl-steam' id="logo"></i></a></li>
-            <li id="navbar-item"><button id="navbar-btn"><a href="#">Store</a></button></li>
-            <li id="navbar-item"><button id="navbar-btn"><a href="#">Community</a></button></li>
-            <li id="navbar-item"><button id="navbar-btn"><a href="#">About</a></button></li>
-            <li id="navbar-item"><button id="navbar-btn"><a href="#">Support</a></button></li>
-            <li id="navbar-item"><button id="navbar-btn-install"><a href="#">Install Steam</a></button></li>
-            <button type="submit" id="navbar-search-btn"><i class='bx bx-search'></i></button>
-            <input type="text" placeholder="Search..">
-        </ul>
+        <div class="logo"><a href="#"><img id="navbarLogo" src="./assets/img/logo_little.png" alt="navbarLogo"></a></div>
+        <div class="navbarButtons">
+            <a class="navbarItem" href="#">Market</a></li>
+            <a class="navbarItem" href="#">Trade</a></li>
+        </div>
+        <div class="navbarSearch">
+            <button type="submit" id="navbarSearchBtn"><i class='bx bx-search'></i></button>
+            <input type="text" placeholder="Cauta skin-ul tau ideal..">
+        </div>
+        <div class="navbarButtonsRight">
+            <a id="navbarIcon" class="navbarItem" href="#"><i class='bx bxs-heart'></i></a>
+            <a id="navbarIcon" class="navbarItem" href="#"><i class='bx bx-git-compare' ></i></a>    
+            <a id="navbarIcon" class="navbarItem" href="#"><i class='bx bxs-cart' ></i></a>
+            <a id="navbarIcon" class="navbarItem" href="#"><i class='bx bxs-user'></i></a>
+        </div>
     </div>
 </body>
 

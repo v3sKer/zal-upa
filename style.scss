@@ -1,0 +1,153 @@
+$bgColorPos0: #dadada;
+$bgColorPos1: #2b2b2b;
+$bgColorPos2: #494949;
+$bgColorPos3: #6e6e6e;
+$whiteColor: #F6F4F1;
+$hoverColor: #66c0f4;
+$borderColor: #3d3d3d;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $bgColorPos0;
+    font-family: Montserrat, sans-serif;
+    }
+
+/* Inceputul antetului */
+
+.header {
+    margin: auto;
+    background-color: $bgColorPos0;
+    height: 40px;
+    width: 55%;
+    border-radius: 16px;
+}
+
+.headerLogo {
+    display: block;
+    margin: auto;
+}
+
+#logoHeader {
+    position: relative;
+    margin: 7px auto;
+    height: 100%;
+    left: 40%;
+    width: 20%;
+}
+
+/* Sfarsitul antetului */
+
+/* Inceputul navbar */
+
+.navbar {
+    margin: 5px auto;
+    background-color: $bgColorPos1;
+    height: 70px;
+    width: 55%;
+    border-radius: 15px;
+}
+
+.logo {
+    display: inline-block;;
+    margin: 15px 15px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+#navbarLogo {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.navbarButtons {
+    display: inline-block;
+    margin: 24px 0px;
+    vertical-align: top;
+}
+
+.navbarItem {
+    margin: 0px 10px;
+    font-size: 18px;
+    color: $bgColorPos3;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.navbarItem:hover {color: $whiteColor;}
+
+.navbarSearch {display: inline;}
+
+.navbar input[type=text] {
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+    left: 12%;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    background-color: $bgColorPos2;
+    color: $whiteColor;
+    padding: 14px 14px;
+    width: 35%;
+    margin: 10px 0px;
+    border-radius: 8px;
+    border: none;
+    text-align: left;
+    vertical-align: top;
+}
+
+.navbarButtonsRight {
+    float: right;
+    display: inline;
+}
+
+#navbarSearchBtn {
+    z-index: 1;
+    background-color: $bgColorPos1;
+    position: relative;
+    left: 48.75%;
+    top: -20.5%;
+    border: none;
+    height: 36px;
+    width: 36px;
+    border-radius: 8px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#navbarSearchBtn i {
+    padding: 3px;
+    scale: 150%;
+    color: $bgColorPos3;
+    transition: 0.5s;
+}
+
+#navbarSearchBtn:hover {background-color: $hoverColor;}
+
+#navbarSearchBtn:hover i {color: #000;}
+
+#navbarIcon {
+    vertical-align: bottom;
+    display: inline-block;
+    height: 46px;
+    width: 46px;
+}
+
+#navbarIcon i {
+    margin: 26px 0px 0px -8px;
+    color: $bgColorPos3;
+    vertical-align: bottom;
+    scale: 170%;   
+    transition: 0.3s;
+}
+
+#navbarIcon:hover i {color: $whiteColor;}
+
+/* Sfarsitul navbar */
+
+/*# sourceMappingURL=style.css.map */
+
