@@ -16,15 +16,16 @@ body {
 
 .headerLogo {
   display: block;
-  margin: auto;
+  margin: 10px auto;
 }
 
 #logoHeader {
-  position: relative;
-  margin: 7px auto;
+  margin: 5px auto;
   height: 100%;
-  left: 40%;
   width: 20%;
+  scale: 160%;
+  position: relative;
+  left: 41%;
 }
 
 /* Sfarsitul antetului */
@@ -33,7 +34,7 @@ body {
   margin: 5px auto;
   background-color: #2b2b2b;
   height: 70px;
-  width: 55%;
+  width: 60%;
   border-radius: 15px;
 }
 
@@ -49,9 +50,15 @@ body {
   width: 40px;
   height: 40px;
   overflow: hidden;
+  transition: 0.2s;
 }
 
-.navbarButtons {
+#navbarLogo:hover {
+  scale: 110%;
+  transition: 0.5s;
+}
+
+.navbarButtonsLeft {
   display: inline-block;
   margin: 24px 0px;
   vertical-align: top;
@@ -79,13 +86,12 @@ body {
   z-index: 0;
   overflow: hidden;
   position: relative;
-  left: 12%;
   font-family: Montserrat, sans-serif;
   font-size: 18px;
   background-color: #494949;
   color: #F6F4F1;
   padding: 14px 14px;
-  width: 35%;
+  width: 40%;
   margin: 10px 0px;
   border-radius: 8px;
   border: none;
@@ -93,16 +99,11 @@ body {
   vertical-align: top;
 }
 
-.navbarButtonsRight {
-  float: right;
-  display: inline;
-}
-
 #navbarSearchBtn {
   z-index: 1;
   background-color: #2b2b2b;
   position: relative;
-  left: 48.75%;
+  left: 42.5%;
   top: -20.5%;
   border: none;
   height: 36px;
@@ -119,12 +120,13 @@ body {
   transition: 0.5s;
 }
 
-#navbarSearchBtn:hover {
-  background-color: #66c0f4;
+#navbarSearchBtn:hover i {
+  color: #F6F4F1;
 }
 
-#navbarSearchBtn:hover i {
-  color: #000;
+.navbarButtonsRight {
+  float: right;
+  display: inline;
 }
 
 #navbarIcon {
