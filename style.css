@@ -5,7 +5,12 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
-/* Inceputul antetului */
+hr {
+  margin: 20px 0px;
+  border-top: 2px solid #bcbcbc;
+}
+
+/* Start header section */
 .header {
   margin: auto;
   background-color: #dadada;
@@ -28,8 +33,9 @@ body {
   left: 41%;
 }
 
-/* Sfarsitul antetului */
-/* Inceputul navbar */
+/* End header section */
+/* -------------------------------- */
+/* Start navbar section */
 .navbar {
   margin: 5px auto;
   background-color: #2b2b2b;
@@ -60,7 +66,7 @@ body {
 
 .navbarButtonsLeft {
   display: inline-block;
-  margin: 24px 0px;
+  margin: 22px 0px;
   vertical-align: top;
 }
 
@@ -80,6 +86,8 @@ body {
 
 .navbarSearch {
   display: inline;
+  position: relative;
+  left: -1.5%;
 }
 
 .navbar input[type=text] {
@@ -148,5 +156,149 @@ body {
   color: #F6F4F1;
 }
 
-/* Sfarsitul navbar */
+/* End navbar section */
+/* -------------------------------- */
+/* Start sidebar section */
+.sidebar {
+  margin: 10px 10px;
+  border-radius: 15px;
+  width: 19%;
+  min-height: 550px;
+  background-color: #2b2b2b;
+}
+
+.sidebarSection {
+  margin: 0;
+  border-bottom: 2px solid #494949;
+}
+
+.sidebarSection h3 {
+  display: inline-block;
+  color: #F6F4F1;
+  padding: 0 0 0 20px;
+  margin: 0;
+  vertical-align: 250%;
+}
+
+.sidebarList {
+  display: inline-block;
+  padding: 0;
+  margin: 15px 15px;
+  list-style-type: none;
+}
+
+.sidebarItem {
+  padding: 5px 40px;
+  transition: 0.2s;
+}
+
+.sidebarItem a {
+  text-decoration: none;
+  color: #F6F4F1;
+}
+
+.sidebarItem a:hover {
+  transition: 0.5s;
+  color: #66c0f4;
+}
+
+.sidebarSection_display-toggle {
+  display: none;
+}
+
+.sidebarSection_display-toggle-btn {
+  display: inline-flex;
+  vertical-align: top;
+  height: 32px;
+  width: 32px;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0 0 0;
+  cursor: pointer;
+}
+
+.sidebarSection_display-toggle-btn a:hover i {
+  color: #F6F4F1;
+}
+
+#sidebarSection_price h3 {
+  padding: 20px 0 20px 20px;
+}
+
+#sidebarSection_price i {
+  scale: 200%;
+  color: #6e6e6e;
+}
+
+#sidebarSection_price input[type=text] {
+  width: 40%;
+  background-color: #494949;
+  color: #F6F4F1;
+  border: none;
+  border-radius: 6px;
+  height: 30px;
+}
+
+/* End sidebar section */
+/* -------------------------------- */
+/* Modules */
+.menu {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.menu li {
+  position: relative;
+  margin: 0.15rem;
+}
+
+.menu li a {
+  color: #6e6e6e;
+  text-decoration: none;
+  padding: 1rem 0rem;
+  border-radius: 0;
+  transition: 0.2s ease;
+}
+
+.dropdown-menu {
+  list-style: none;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #2b2b2b;
+  box-shadow: 0px 10px 10px 6px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.menu li:hover .dropdown-menu {
+  display: block;
+}
+
+.menu li:hover a {
+  color: #F6F4F1;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  color: #F6F4F1;
+  font-size: 16px;
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+  color: #66c0f4;
+}
+
 /*# sourceMappingURL=style.css.map */

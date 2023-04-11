@@ -6,19 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="script.js"></script><!-- Main JS -->
     <link rel="icon" href="./assets/img/logo_little.png">
     <link rel="stylesheet" href="./style.css"> <!-- Main CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- Icons Stylesheet -->
 </head>
 
 <body>
-    <div class="header">
+    <div class="header"><!-- Start header section -->
         <div class="headerLogo"><img id="logoHeader" src="./assets/img/logo_wide.png" alt="logo"></div>
     </div>
-    <div class="navbar">
+    <!-- End header secction -->
+
+    
+    <div class="navbar"><!-- Start navbar section -->
         <div class="logo"><a href="#"><img id="navbarLogo" src="./assets/img/logo_little.png" alt="navbarLogo"></a></div>
         <div class="navbarButtonsLeft">
-            <a class="navbarItem" href="#">Market</a></li>
+            <ul class="menu">
+                <li><a class="navbarItem" href="#">Market</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">CS:GO</a></li>
+                        <li><a href="#">Rust</a></li>
+                        <li><a href="#">Dota</a></li>
+                    </ul>
+                </li>
+            </ul>    
             <a class="navbarItem" href="#">Trade</a></li>
         </div>
         <div class="navbarSearch">
@@ -28,10 +40,32 @@
         <div class="navbarButtonsRight">
             <a id="navbarIcon" class="navbarItem" href="#"><i class='bx bxs-heart'></i></a>
             <!-- <a id="navbarIcon" class="navbarItem" href="#"><i class='bx bx-git-compare' ></i></a> -->   
-            <a id="navbarIcon" class="navbarItem" href="#"><i class='bx bxs-cart' ></i></a>
+            <a id="navbarIcon" class="navbarItem" href="#"><i class='bx bxs-cart'></i></a>
             <a id="navbarIcon" class="navbarItem" href="#"><i class='bx bxs-user'></i></a>
         </div>
     </div>
+    <!-- End navbar section -->
+
+    <div class="sidebar"><!-- Start sidebar section -->
+        <div class="sidebarSection" id="sidebarSection_price">
+            <h3>Price</h3>
+            <a class="sidebarSection_display-toggle-btn"><i class='bx bx-chevron-down'></i></a>
+            <div class="sidebarSection_display-toggle">
+                <input type="text" name="min"><input type="text" name="max">
+            </div>
+        </div>
+        <div class="sidebarSection">
+            <h3>Items</h3>
+            <ul class="sidebarList">
+                <li class="sidebarItem"><a href="#">Knifes</a></li>
+                <li class="sidebarItem"><a href="#">M4A1-S</a></li>
+                <li class="sidebarItem"><a href="#">AK-47</a></li>
+                <li class="sidebarItem"><a href="#">AWP</a></li>
+                <li class="sidebarItem"><a href="#">Deagle</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End sidebar section -->
 </body>
 
 </html>

@@ -2,6 +2,7 @@ $bgColorPos0: #dadada;
 $bgColorPos1: #2b2b2b;
 $bgColorPos2: #494949;
 $bgColorPos3: #6e6e6e;
+$hrColor: #bcbcbc;
 $whiteColor: #F6F4F1;
 $hoverColor: #66c0f4;
 $borderColor: #3d3d3d;
@@ -11,9 +12,14 @@ body {
     padding: 0;
     background-color: $bgColorPos0;
     font-family: Montserrat, sans-serif;
-    }
+}
 
-/* Inceputul antetului */
+hr {
+    margin: 20px 0px;
+    border-top: 2px solid $hrColor;
+}
+
+/* Start header section */
 
 .header {
     margin: auto;
@@ -37,9 +43,11 @@ body {
     left: 41%;
 }
 
-/* Sfarsitul antetului */
+/* End header section */
 
-/* Inceputul navbar */
+/* -------------------------------- */
+
+/* Start navbar section */
 
 .navbar {
     margin: 5px auto;
@@ -50,7 +58,7 @@ body {
 }
 
 .logo {
-    display: inline-block;;
+    display: inline-block;
     margin: 15px 15px;
     height: 40px;
     width: 40px;
@@ -68,7 +76,7 @@ body {
 
 .navbarButtonsLeft {
     display: inline-block;
-    margin: 24px 0px;
+    margin: 22px 0px;
     vertical-align: top;
 }
 
@@ -84,7 +92,11 @@ body {
 
 .navbarItem:hover {color: $whiteColor;}
 
-.navbarSearch {display: inline;}
+.navbarSearch {
+    display: inline;
+    position: relative;
+    left: -1.5%;
+}
 
 .navbar input[type=text] {
     z-index: 0;
@@ -148,7 +160,142 @@ body {
 
 #navbarIcon:hover i {color: $whiteColor;}
 
-/* Sfarsitul navbar */
+/* End navbar section */
+
+/* -------------------------------- */
+
+/* Start sidebar section */
+
+.sidebar {
+    margin: 10px 10px;
+    border-radius: 15px;
+    width: 19%;
+    min-height: 550px;
+    background-color: $bgColorPos1;
+}
+
+.sidebarSection {
+    margin: 0;
+    border-bottom: 2px solid $bgColorPos2;
+}
+
+.sidebarSection h3 {
+    display: inline-block;
+    color: $whiteColor;
+    padding: 0 0 0 20px;
+    margin: 0;
+    vertical-align: 250%;
+}
+
+.sidebarList {
+    display: inline-block;
+    padding: 0;
+    margin: 15px 15px;
+    list-style-type: none;
+}
+
+.sidebarItem {
+    padding: 5px 40px;
+    transition: 0.2s;
+}
+
+.sidebarItem a {
+    text-decoration: none;
+    color: $whiteColor;
+}
+
+.sidebarItem a:hover {transition: 0.5s; color: $hoverColor;}
+
+.sidebarSection_display-toggle {
+    display: none;
+}
+
+.sidebarSection_display-toggle-btn {
+    display: inline-flex;
+    vertical-align: top;
+    height: 32px;
+    width: 32px;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0 0 0;
+    cursor: pointer;
+}
+
+.sidebarSection_display-toggle-btn a:hover i {color: $whiteColor}
+
+#sidebarSection_price h3 {
+    padding: 20px 0 20px 20px;
+}
+
+#sidebarSection_price i {
+    scale: 200%;
+    color: $bgColorPos3;
+}
+
+#sidebarSection_price input[type=text] {
+    width: 40%;
+    background-color: $bgColorPos2;
+    color: $whiteColor;
+    border: none;
+    border-radius: 6px;
+    height: 30px;
+}
+
+/* End sidebar section */
+
+/* -------------------------------- */
+
+/* Modules */
+
+.menu {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.menu li {
+    position: relative;
+    margin: 0.15rem;
+}
+
+.menu li a {
+    color: $bgColorPos3;
+    text-decoration: none;
+    padding: 1rem 0rem;
+    border-radius: 0;
+    transition: 0.2s ease;
+}
+
+.dropdown-menu {
+    list-style: none;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: $bgColorPos1;
+    box-shadow: 0px 10px 10px 6px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.menu li:hover .dropdown-menu {display: block;}
+
+.menu li:hover a {color: $whiteColor;}
+
+.dropdown-menu li {margin: 0;}
+
+.dropdown-menu li a {
+    color: $whiteColor;
+    font-size: 16px;
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.dropdown-menu li a:hover {color: $hoverColor;}
 
 /*# sourceMappingURL=style.css.map */
-
