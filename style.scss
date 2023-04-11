@@ -11,36 +11,19 @@ body {
     margin: 0;
     padding: 0;
     background-color: $bgColorPos0;
-    font-family: Montserrat, sans-serif;
-}
-
-hr {
-    margin: 20px 0px;
-    border-top: 2px solid $hrColor;
+    font-family: Montserrat, Arial, sans-serif;
 }
 
 /* Start header section */
 
 .header {
-    margin: auto;
-    background-color: $bgColorPos0;
-    height: 40px;
-    width: 55%;
-    border-radius: 16px;
-}
-
-.headerLogo {
-    display: block;
-    margin: 10px auto;
+    display: flex;
+    justify-content: center;
 }
 
 #logoHeader {
-    margin: 5px auto;
-    height: 100%;
-    width: 20%;
-    scale: 160%;
-    position: relative;
-    left: 41%;
+    width: 15%;
+    padding: 10px;
 }
 
 /* End header section */
@@ -50,112 +33,77 @@ hr {
 /* Start navbar section */
 
 .navbar {
+    display: flex;
+    justify-content: space-between;  
     margin: 5px auto;
     background-color: $bgColorPos1;
     height: 70px;
-    width: 60%;
+    width: 850px;
     border-radius: 15px;
-}
-
-.logo {
-    display: inline-block;
-    margin: 15px 15px;
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
 }
 
 #navbarLogo {
     width: 40px;
     height: 40px;
-    overflow: hidden;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 #navbarLogo:hover {scale: 110%; transition: 0.5s;}
 
 .navbarButtonsLeft {
-    display: inline-block;
-    margin: 22px 0px;
-    vertical-align: top;
+    display: flex;
+    align-items: center;
+    width: 210px;
+    justify-content: space-between;
 }
 
 .navbarItem {
-    margin: 0px 10px;
+    margin: 0;
+    padding: 10px;
     font-size: 18px;
     color: $bgColorPos3;
-    vertical-align: middle;
     text-decoration: none;
     text-align: center;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
-.navbarItem:hover {color: $whiteColor;}
+.navbarItem:hover {color: $whiteColor; transition: 0.5s;}
 
 .navbarSearch {
-    display: inline;
-    position: relative;
-    left: -1.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.navbar input[type=text] {
-    z-index: 0;
-    overflow: hidden;
-    position: relative;
+.navbarSearch input[type=text] {
+    width: 380px;
     font-family: Montserrat, sans-serif;
     font-size: 18px;
     background-color: $bgColorPos2;
     color: $whiteColor;
     padding: 14px 14px;
-    width: 40%;
-    margin: 10px 0px;
     border-radius: 8px;
     border: none;
     text-align: left;
-    vertical-align: top;
 }
 
-#navbarSearchBtn {
-    z-index: 1;
-    background-color: $bgColorPos1;
-    position: relative;
-    left: 42.5%;
-    top: -20.5%;
-    border: none;
-    height: 36px;
-    width: 36px;
-    border-radius: 8px;
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-#navbarSearchBtn i {
-    padding: 3px;
-    scale: 150%;
-    color: $bgColorPos3;
-    transition: 0.5s;
-}
-
-#navbarSearchBtn:hover i {color: $whiteColor;}
+.navbarSearch input:focus {outline: 1px solid $bgColorPos3;}
 
 .navbarButtonsRight {
-    float: right;
-    display: inline;
-}
-
-#navbarIcon {
-    vertical-align: bottom;
-    display: inline-block;
-    height: 46px;
-    width: 46px;
+    display: flex;
+    width: 210px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #navbarIcon i {
-    margin: 26px 0px 0px -8px;
     color: $bgColorPos3;
-    vertical-align: bottom;
-    scale: 170%;   
+    scale: 170%;
+    padding: 2px;
+    margin: 5px;
     transition: 0.3s;
+    vertical-align: bottom;
 }
 
 #navbarIcon:hover i {color: $whiteColor;}
@@ -169,22 +117,34 @@ hr {
 .sidebar {
     margin: 10px 10px;
     border-radius: 15px;
-    width: 19%;
-    min-height: 550px;
+    width: 410px;
+    height: auto;
     background-color: $bgColorPos1;
+    padding: 20px 0px;
 }
 
 .sidebarSection {
     margin: 0;
+    display: flex;
+    align-items: center;
     border-bottom: 2px solid $bgColorPos2;
 }
 
 .sidebarSection h3 {
     display: inline-block;
     color: $whiteColor;
-    padding: 0 0 0 20px;
+    padding: 20px 10px 20px 20px;
     margin: 0;
-    vertical-align: 250%;
+}
+
+.sidebarSection i {
+    scale: 200%;
+    color: $bgColorPos3;
+}
+
+.sidebarSection p {
+    color: $whiteColor;
+    font-size: 18px;
 }
 
 .sidebarList {
@@ -195,7 +155,8 @@ hr {
 }
 
 .sidebarItem {
-    padding: 5px 40px;
+    text-align: center;
+    padding: 5px;
     transition: 0.2s;
 }
 
@@ -206,40 +167,45 @@ hr {
 
 .sidebarItem a:hover {transition: 0.5s; color: $hoverColor;}
 
-.sidebarSection_display-toggle {
-    display: none;
-}
-
-.sidebarSection_display-toggle-btn {
-    display: inline-flex;
-    vertical-align: top;
-    height: 32px;
-    width: 32px;
+#sidebarHeader {
     justify-content: center;
-    align-items: center;
-    margin: 16px 0 0 0;
-    cursor: pointer;
 }
 
-.sidebarSection_display-toggle-btn a:hover i {color: $whiteColor}
-
-#sidebarSection_price h3 {
-    padding: 20px 0 20px 20px;
-}
-
-#sidebarSection_price i {
-    scale: 200%;
-    color: $bgColorPos3;
+#sidebarHeader h1 {
+    margin: 0 0 20px 0;
+    color: #774cda;
 }
 
 #sidebarSection_price input[type=text] {
-    width: 40%;
+    font-family: Montserrat, Arial, sans-serif;
+    text-align: center;
+    width: 125px;
+    margin: 10px;
+    font-size: 15px;
     background-color: $bgColorPos2;
     color: $whiteColor;
     border: none;
     border-radius: 6px;
     height: 30px;
 }
+
+#floatSelection {
+    font-family: Montserrat, Arial, sans-serif;
+    text-align: center;
+    height: 30px;
+    margin: 10px;
+    padding: 0px 15px;
+    font-size: 15px;
+    background-color: $bgColorPos2;
+    color: $bgColorPos3;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;  
+}
+
+#floatSelection:focus {color: $whiteColor; transition: 0.5s;}
+
 
 /* End sidebar section */
 
@@ -252,7 +218,6 @@ hr {
     list-style: none;
     margin: 0;
     padding: 0;
-    flex-grow: 1;
     justify-content: center;
 }
 

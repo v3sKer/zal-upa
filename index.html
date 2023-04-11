@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script><!-- Main JS -->
     <link rel="icon" href="./assets/img/logo_little.png">
     <link rel="stylesheet" href="./style.css"> <!-- Main CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- Icons Stylesheet -->
@@ -14,14 +13,15 @@
 
 <body>
     <div class="header"><!-- Start header section -->
-        <div class="headerLogo"><img id="logoHeader" src="./assets/img/logo_wide.png" alt="logo"></div>
+        <img id="logoHeader" src="./assets/img/logo_wide.png" alt="logo">
     </div>
     <!-- End header secction -->
 
     
     <div class="navbar"><!-- Start navbar section -->
-        <div class="logo"><a href="#"><img id="navbarLogo" src="./assets/img/logo_little.png" alt="navbarLogo"></a></div>
+        
         <div class="navbarButtonsLeft">
+            <a class="navbarItem" href="#"><img id="navbarLogo" src="./assets/img/logo_little.png" alt="navbarLogo"></a>
             <ul class="menu">
                 <li><a class="navbarItem" href="#">Market</a>
                     <ul class="dropdown-menu">
@@ -33,13 +33,12 @@
             </ul>    
             <a class="navbarItem" href="#">Trade</a></li>
         </div>
-        <div class="navbarSearch">
-            <button type="submit" id="navbarSearchBtn"><i class='bx bx-search'></i></button>
-            <input type="text" placeholder="Cauta skin-ul tau ideal..">
-        </div>
+        <form class="navbarSearch">
+            <input type="text" placeholder="Caută skin-ul tău ideal..">
+        </form>
         <div class="navbarButtonsRight">
             <a id="navbarIcon" class="navbarItem" href="#"><i class='bx bxs-heart'></i></a>
-            <!-- <a id="navbarIcon" class="navbarItem" href="#"><i class='bx bx-git-compare' ></i></a> -->   
+            <a id="navbarIcon" class="navbarItem" href="#"><i class='bx bx-git-compare'></i></a>   
             <a id="navbarIcon" class="navbarItem" href="#"><i class='bx bxs-cart'></i></a>
             <a id="navbarIcon" class="navbarItem" href="#"><i class='bx bxs-user'></i></a>
         </div>
@@ -47,15 +46,13 @@
     <!-- End navbar section -->
 
     <div class="sidebar"><!-- Start sidebar section -->
+        <div class="sidebarSection" id="sidebarHeader"><h1>Filters</h1></div>
         <div class="sidebarSection" id="sidebarSection_price">
-            <h3>Price</h3>
-            <a class="sidebarSection_display-toggle-btn"><i class='bx bx-chevron-down'></i></a>
-            <div class="sidebarSection_display-toggle">
-                <input type="text" name="min"><input type="text" name="max">
-            </div>
+            <h3>Price</h3><i class='bx bx-chevron-right'></i>           
+            <input type="text" placeholder="min price"><p>-</p><input type="text" placeholder="max price">
         </div>
         <div class="sidebarSection">
-            <h3>Items</h3>
+            <h3>Items</h3><i class='bx bx-chevron-right'></i>
             <ul class="sidebarList">
                 <li class="sidebarItem"><a href="#">Knifes</a></li>
                 <li class="sidebarItem"><a href="#">M4A1-S</a></li>
@@ -63,6 +60,31 @@
                 <li class="sidebarItem"><a href="#">AWP</a></li>
                 <li class="sidebarItem"><a href="#">Deagle</a></li>
             </ul>
+            <ul class="sidebarList">
+                <li class="sidebarItem"><a href="#">Gloves</a></li>
+                <li class="sidebarItem"><a href="#">AUG</a></li>
+                <li class="sidebarItem"><a href="#">SG-553</a></li>
+                <li class="sidebarItem"><a href="#">Glock</a></li>
+                <li class="sidebarItem"><a href="#">USP-S</a></li>
+            </ul>
+            </ul>
+            <ul class="sidebarList">
+                <li class="sidebarItem"><a href="#">Stickerș</a></li>
+                <li class="sidebarItem"><a href="#">Cases</a></li>
+                <li class="sidebarItem"><a href="#">Keys</a></li>
+                <li class="sidebarItem"><a href="#">SSG 08</a></li>
+                <li class="sidebarItem"><a href="#">P250</a></li>
+            </ul>
+        </div>
+        <div class="sidebarSection">
+            <h3>Exterior</h3><i class='bx bx-chevron-right'></i>
+            <select name="float" id="floatSelection">
+                <option value="fn">Factory New</option>
+                <option value="mw">Minimal Wear</option>
+                <option value="ft">Field Tested</option>
+                <option value="ww">Well-Worn</option>
+                <option value="bs">Battle Scared</option>
+            </select>
         </div>
     </div>
     <!-- End sidebar section -->
