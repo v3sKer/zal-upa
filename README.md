@@ -2,15 +2,6 @@
 
 This is a website template for a CS:GO skin trading website. Please note that this is a practice project for college and is not intended for commercial use.
 
-### Features
-
-- Home page with featured skins and latest news
-- Skin inventory with filtering options
-- Skin details page with information about the skin, including wear, rarity, and price
-- User authentication and profile page
-- Shopping cart functionality for purchasing skins
-- Admin panel for managing skins, users, and orders
-
 ### Technologies Used
 
 - HTML/CSS
