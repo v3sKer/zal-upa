@@ -6,12 +6,18 @@ $hrColor: #bcbcbc;
 $whiteColor: #F6F4F1;
 $hoverColor: #66c0f4;
 $borderColor: #3d3d3d;
+$green_price: #0ed50e;
+$green_buy-btn: greenyellow;
 
 body {
     margin: 0;
     padding: 0;
     background-color: $bgColorPos0;
     font-family: Montserrat, Arial, sans-serif;
+}
+
+hr {
+    border-bottom: 2px solid gray;
 }
 
 /* Start header section */
@@ -112,9 +118,138 @@ body {
 
 /* -------------------------------- */
 
-/* Start sidebar section */
+/* Start content section */
 
+.content {display: flex; align-items: flex-start;}
+
+.content h1 {
+    margin: 0;
+    color: #774cda;
+    padding: 10px;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    background-color: $bgColorPos1;
+    width: 100%;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+#mainContent_header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid $bgColorPos2;
+}
+
+#mainContent_container {
+    padding: 10px;
+}
+
+#mainContent_row {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10px 0px 1 0px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    border-radius: 12px;
+    background-color: $bgColorPos3;
+    transition: 0.2s;
+}
+
+.item:hover img {
+    scale: 105%;
+    transition: 0.5s;
+}
+
+.item h4, h2 {
+    color: $whiteColor;
+    margin: 15px;
+}
+
+.item h4 {
+    font-weight: normal;
+}
+
+.item hr {
+    border: 1px solid $bgColorPos2;
+}
+
+.item_image {
+    background-color: $bgColorPos2;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom: 3px solid $hoverColor;
+    display: flex;
+    justify-content: center;
+}
+
+.item_image img {
+    width: 95%;   
+    transition: 0.2s;
+    padding: 10px 10px;
+}
+
+.item_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: $whiteColor;
+    margin: 5px;
+    padding: 5px;
+    background-color: $bgColorPos2;
+    box-shadow: 0px 3px 3px 5px rgba($color: black, $alpha: 0.05);
+    text-align: center;
+    transition: 0.2s;
+}
+
+.item_btn:hover {
+    background-color: $hoverColor;
+    transition: 0.5s;
+    box-shadow: 0px 3px 3px 5px rgba($color: $hoverColor, $alpha: 0.05);
+    color: #000;
+}
+
+#item_buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 5px 0;
+}
+
+#price {
+    color: $green_price;
+}
+
+#buy_btn {  
+    background-color: greenyellow;
+    box-shadow: 0px 4px 8px 4px rgba($color: $green_buy-btn, $alpha: 0.2);
+    color: #000;
+    font-weight: bold;
+}
+
+#buy_btn:hover {
+    background-color: $hoverColor;
+    box-shadow: 0px 4px 8px 4px rgba($color: $hoverColor, $alpha: 0.2);
+    color: #000;
+}
+
+#info_btn {width: 40px;}
+
+/* Start sidebar */
 .sidebar {
+    display: flex;
+    flex-direction: column;
     margin: 10px 10px;
     border-radius: 15px;
     width: 410px;
@@ -171,11 +306,6 @@ body {
     justify-content: center;
 }
 
-#sidebarHeader h1 {
-    margin: 0 0 20px 0;
-    color: #774cda;
-}
-
 #sidebarSection_price input[type=text] {
     font-family: Montserrat, Arial, sans-serif;
     text-align: center;
@@ -187,6 +317,10 @@ body {
     border: none;
     border-radius: 6px;
     height: 30px;
+}
+
+#sidebarHeader {
+    padding: 0px 10px 10px 10px;
 }
 
 #floatSelection {
@@ -205,9 +339,34 @@ body {
 }
 
 #floatSelection:focus {color: $whiteColor; transition: 0.5s;}
+/* End sidebar */
 
+/* End content section */
 
-/* End sidebar section */
+/* -------------------------------- */
+
+/* Start footer section */
+
+.footer {
+    display: flex;
+    margin: 10px;
+    flex-direction: column;;
+    background-color: $bgColorPos3;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.footer h1 {
+    color: $whiteColor;
+}
+
+.footer a {
+    font-weight: bold;
+    text-decoration: none;
+    color: $hoverColor;
+}
+
+/* End footer section */
 
 /* -------------------------------- */
 
@@ -262,5 +421,7 @@ body {
 }
 
 .dropdown-menu li a:hover {color: $hoverColor;}
+
+/* End modules section */
 
 /*# sourceMappingURL=style.css.map */

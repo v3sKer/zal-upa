@@ -45,49 +45,170 @@
     </div>
     <!-- End navbar section -->
 
-    <div class="sidebar"><!-- Start sidebar section -->
-        <div class="sidebarSection" id="sidebarHeader"><h1>Filters</h1></div>
-        <div class="sidebarSection" id="sidebarSection_price">
-            <h3>Price</h3><i class='bx bx-chevron-right'></i>           
-            <input type="text" placeholder="min price"><p>-</p><input type="text" placeholder="max price">
-        </div>
-        <div class="sidebarSection">
-            <h3>Items</h3><i class='bx bx-chevron-right'></i>
-            <ul class="sidebarList">
-                <li class="sidebarItem"><a href="#">Knifes</a></li>
-                <li class="sidebarItem"><a href="#">M4A1-S</a></li>
-                <li class="sidebarItem"><a href="#">AK-47</a></li>
-                <li class="sidebarItem"><a href="#">AWP</a></li>
-                <li class="sidebarItem"><a href="#">Deagle</a></li>
-            </ul>
-            <ul class="sidebarList">
-                <li class="sidebarItem"><a href="#">Gloves</a></li>
-                <li class="sidebarItem"><a href="#">AUG</a></li>
-                <li class="sidebarItem"><a href="#">SG-553</a></li>
-                <li class="sidebarItem"><a href="#">Glock</a></li>
-                <li class="sidebarItem"><a href="#">USP-S</a></li>
-            </ul>
-            </ul>
-            <ul class="sidebarList">
-                <li class="sidebarItem"><a href="#">Stickerș</a></li>
-                <li class="sidebarItem"><a href="#">Cases</a></li>
-                <li class="sidebarItem"><a href="#">Keys</a></li>
-                <li class="sidebarItem"><a href="#">SSG 08</a></li>
-                <li class="sidebarItem"><a href="#">P250</a></li>
-            </ul>
-        </div>
-        <div class="sidebarSection">
-            <h3>Exterior</h3><i class='bx bx-chevron-right'></i>
-            <select name="float" id="floatSelection">
-                <option value="fn">Factory New</option>
-                <option value="mw">Minimal Wear</option>
-                <option value="ft">Field Tested</option>
-                <option value="ww">Well-Worn</option>
-                <option value="bs">Battle Scared</option>
-            </select>
+    <div class="content"><!-- Start content section -->
+        <div class="sidebar"><!-- Start sidebar section -->
+            <div class="sidebarSection" id="sidebarHeader"><h1 id="#sidebarHeader">Filters</h1></div>
+            <div class="sidebarSection" id="sidebarSection_price">
+                <h3>Price</h3><i class='bx bx-chevron-right'></i>           
+                <input type="text" placeholder="min price"><p>-</p><input type="text" placeholder="max price">
+            </div>
+            <div class="sidebarSection">
+                <h3>Items</h3><i class='bx bx-chevron-right'></i>
+                <ul class="sidebarList">
+                    <li class="sidebarItem"><a href="#">Knifes</a></li>
+                    <li class="sidebarItem"><a href="#">M4A1-S</a></li>
+                    <li class="sidebarItem"><a href="#">AK-47</a></li>
+                    <li class="sidebarItem"><a href="#">AWP</a></li>
+                    <li class="sidebarItem"><a href="#">Deagle</a></li>
+                </ul>
+                <ul class="sidebarList">
+                    <li class="sidebarItem"><a href="#">Gloves</a></li>
+                    <li class="sidebarItem"><a href="#">AUG</a></li>
+                    <li class="sidebarItem"><a href="#">SG-553</a></li>
+                    <li class="sidebarItem"><a href="#">Glock</a></li>
+                    <li class="sidebarItem"><a href="#">USP-S</a></li>
+                </ul>
+                </ul>
+                <ul class="sidebarList">
+                    <li class="sidebarItem"><a href="#">Stickerș</a></li>
+                    <li class="sidebarItem"><a href="#">Cases</a></li>
+                    <li class="sidebarItem"><a href="#">Keys</a></li>
+                    <li class="sidebarItem"><a href="#">SSG 08</a></li>
+                    <li class="sidebarItem"><a href="#">P250</a></li>
+                </ul>
+            </div>
+            <div class="sidebarSection">
+                <h3>Exterior</h3><i class='bx bx-chevron-right'></i>
+                <select name="float" id="floatSelection">
+                    <option value="fn">Factory New</option>
+                    <option value="mw">Minimal Wear</option>
+                    <option value="ft">Field Tested</option>
+                    <option value="ww">Well-Worn</option>
+                    <option value="bs">Battle Scared</option>
+                </select>
+            </div>
+        </div><!-- End sidebar section -->
+        <div class="mainContent">
+            <div id="mainContent_header"><h1>Items on market</h1></div>
+            <div id="mainContent_container">
+                <div id="mainContent_row">
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="./assets/butterfly_marblefade.png" alt="Butterfly Knife | Marble Fade (FN)">
+                        </div>
+                        <h4>★ Butterfly Knife | Marble Fade (Factory New)</h4>
+                        <h2 id="price">$2 290.00</h2>
+                        <div id="item_buttons">
+                            <a class="item_btn" id="buy_btn" href="#"><i class='bx bxs-cart-add'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-info-circle'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxl-steam'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-share-alt' ></i></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="./assets/deagle_blaze.png" alt="Desert Eagle | Blaze (FN)">
+                        </div>
+                        <h4>Desert Eagle | Blaze (Factory New)</h4>
+                        <h2 id="price">$619.99</h2>
+                        <div id="item_buttons">
+                            <a class="item_btn" id="buy_btn" href="#"><i class='bx bxs-cart-add'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-info-circle'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxl-steam'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-share-alt' ></i></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="./assets/m4a1s_printstream.png" alt="M4A1-S | Printstream (MW)">
+                        </div>
+                        <h4>M4A1-S | Printstream (Minimal Wear)</h4>
+                        <h2 id="price">$270.00</h2>
+                        <div id="item_buttons">
+                            <a class="item_btn" id="buy_btn" href="#"><i class='bx bxs-cart-add'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-info-circle'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxl-steam'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-share-alt' ></i></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="./assets/glv_crimsonweb.png" alt="★ Specialist Gloves | Crimson Web (MW)">
+                        </div>
+                        <h4>★ Specialist Gloves | Crimson Web (Minimal Wear)</h4>
+                        <h2 id="price">$835.00</h2>
+                        <div id="item_buttons">
+                            <a class="item_btn" id="buy_btn" href="#"><i class='bx bxs-cart-add'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-info-circle'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxl-steam'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-share-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="mainContent_row">
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="./assets/ak_ice-coaled.png" alt="item_image">
+                        </div>
+                        <h4>StatTrak™ AK-47 | Ice Coaled (Minimal Wear)</h4>
+                        <h2 id="price">$62.50</h2>
+                        <div id="item_buttons">
+                            <a class="item_btn" id="buy_btn" href="#"><i class='bx bxs-cart-add'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-info-circle'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxl-steam'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-share-alt' ></i></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="./assets/awp_chromatic.png" alt="item_image">
+                        </div>
+                        <h4>AWP | Chromatic Aberration (Minimal Wear)</h4>
+                        <h2 id="price">$46.50</h2>
+                        <div id="item_buttons">
+                            <a class="item_btn" id="buy_btn" href="#"><i class='bx bxs-cart-add'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-info-circle'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxl-steam'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-share-alt' ></i></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="./assets/m9bayonet_tiger.png" alt="item_image">
+                        </div>
+                        <h4>★ M9 Bayonet | Tiger Tooth (Factory New)</h4>
+                        <h2 id="price">$1 425.00</h2>
+                        <div id="item_buttons">
+                            <a class="item_btn" id="buy_btn" href="#"><i class='bx bxs-cart-add'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-info-circle'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxl-steam'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-share-alt' ></i></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_image">
+                            <img src="./assets/glv_vice.png" alt="item_image">
+                        </div>
+                        <h4>★ Sport Gloves | Vice (Field-Tested)</h4>
+                        <h2 id="price">$2 300.00</h2>
+                        <div id="item_buttons">
+                            <a class="item_btn" id="buy_btn" href="#"><i class='bx bxs-cart-add'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-info-circle'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxl-steam'></i></a>
+                            <a class="item_btn" id="info_btn" href="#"><i class='bx bxs-share-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- End sidebar section -->
+    <!-- End content section -->
+    <hr>
+    <div class="footer"><!-- Start footer section -->
+        <h1>footer? numai cu femei.</h1>
+        <p>Developed by <a href="https://v3sker.com/">v3sKer</a> | 2023</p>
+    </div>
+    <!-- End footer section -->
 </body>
 
 </html>
