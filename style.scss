@@ -1,23 +1,26 @@
-$bgColorPos0: #dadada;
-$bgColorPos1: #2b2b2b;
-$bgColorPos2: #494949;
-$bgColorPos3: #6e6e6e;
-$hrColor: #bcbcbc;
-$whiteColor: #F6F4F1;
-$hoverColor: #66c0f4;
+$bgColorPos1: #ececec;
+$bgColorPos2: #d2d2d2;
+$bgColorPos3: #bebebe;
+$hrColor: #cacaca;
+$black: #000;
+$white: #fff;
+$hoverColor: #00aaff;
+$inactiveColor: #9e9e9e;
 $borderColor: #3d3d3d;
-$green_price: #0ed50e;
+$green_price: greenyellow;
 $green_buy-btn: greenyellow;
 
 body {
     margin: 0;
     padding: 0;
-    background-color: $bgColorPos0;
-    font-family: Montserrat, Arial, sans-serif;
+    background-color: $white;
+    font-family: SF Pro Display , Montserrat, Arial, sans-serif;
+    font-size: 16px;
 }
 
-hr {
-    border-bottom: 2px solid gray;
+main {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Start header section */
@@ -51,10 +54,10 @@ hr {
 #navbarLogo {
     width: 40px;
     height: 40px;
-    transition: 0.3s;
+    transition: .3s ease-out;
 }
 
-#navbarLogo:hover {scale: 110%; transition: 0.5s;}
+#navbarLogo:hover {scale: 110%; transition: .3s ease-in;}
 
 .navbarButtonsLeft {
     display: flex;
@@ -70,10 +73,10 @@ hr {
     color: $bgColorPos3;
     text-decoration: none;
     text-align: center;
-    transition: 0.3s;
+    transition: .3s ease-out;
 }
 
-.navbarItem:hover {color: $whiteColor; transition: 0.5s;}
+.navbarItem:hover {color: $black; transition: .3s ease-in;}
 
 .navbarSearch {
     display: flex;
@@ -84,17 +87,18 @@ hr {
 
 .navbarSearch input[type=text] {
     width: 380px;
-    font-family: Montserrat, sans-serif;
+    font-family: SF Pro Display , Montserrat, sans-serif;
     font-size: 18px;
     background-color: $bgColorPos2;
-    color: $whiteColor;
+    color: $inactiveColor;
     padding: 14px 14px;
     border-radius: 8px;
     border: none;
     text-align: left;
+    transition: .3s ease-out;
 }
 
-.navbarSearch input:focus {outline: 1px solid $bgColorPos3;}
+.navbarSearch input:focus {outline: 1px solid #959595; transition: 0.3s ease-in;}
 
 .navbarButtonsRight {
     display: flex;
@@ -108,11 +112,11 @@ hr {
     scale: 170%;
     padding: 2px;
     margin: 5px;
-    transition: 0.3s;
+    transition: 0.3s ease-out;
     vertical-align: bottom;
 }
 
-#navbarIcon:hover i {color: $whiteColor;}
+#navbarIcon:hover i {color: $black; transition: 0.3 ease-in;}
 
 /* End navbar section */
 
@@ -149,102 +153,118 @@ hr {
 
 #mainContent_row {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
-    margin: 10px 10px 0px 1 0px;
 }
 
-.item {
+.item_card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 10px;
     border-radius: 12px;
-    background-color: $bgColorPos3;
-    transition: 0.2s;
+    background-color: $white;
+    transition: 0.3s ease-out;
 }
 
-.item:hover img {
-    scale: 105%;
-    transition: 0.5s;
+.item_card:hover img {
+    scale: 110%;
+    transition: 0.3s ease-in;
 }
 
-.item h4, h2 {
-    color: $whiteColor;
-    margin: 15px;
+.item_card h5 {
+    color: $bgColorPos3;
+    margin: 15px 0 0 15px;
+    font-style: normal;
 }
 
-.item h4 {
-    font-weight: normal;
+.item_card h4 {
+    color: $black;
+    margin: 15px 0 0 15px;
+    font-weight: bold;
+    font-size: 18px;
 }
 
-.item hr {
+.item_card h2 {
+    color: $black;
+    margin: 15px 0 0 15px;
+}
+
+.item_card hr {
     border: 1px solid $bgColorPos2;
 }
 
-.item_image {
+.item_card_image {
     background-color: $bgColorPos2;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
-    border-bottom: 3px solid $hoverColor;
+    border-bottom: 3px solid $hrColor;
     display: flex;
     justify-content: center;
 }
 
-.item_image img {
-    width: 95%;   
-    transition: 0.2s;
+.item_card_image img {
+    width: 65%;   
+    transition: 0.3s ease-in-out;
     padding: 10px 10px;
 }
 
-.item_btn {
+.item_card_btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
     height: 25px;
     border-radius: 5px;
     text-decoration: none;
-    color: $whiteColor;
+    color: $black;
     margin: 5px;
-    padding: 5px;
+    padding: 8px;
     background-color: $bgColorPos2;
-    box-shadow: 0px 3px 3px 5px rgba($color: black, $alpha: 0.05);
+    box-shadow: 0px 3px 3px 2px rgba($color: black, $alpha: 0.05);
     text-align: center;
-    transition: 0.2s;
+    transition: .3s ease-out;
 }
 
-.item_btn:hover {
+.item_card_btn:hover {
     background-color: $hoverColor;
-    transition: 0.5s;
+    transition: .3s ease-in;
     box-shadow: 0px 3px 3px 5px rgba($color: $hoverColor, $alpha: 0.05);
     color: #000;
 }
 
-#item_buttons {
+.item_card_btn i {
+    scale: 150%;
+    padding: 5px;
+}
+
+#item_card_buttons {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin: 5px 0;
+    margin: 5px;
 }
 
-#price {
-    color: $green_price;
+#item_card_price {
+    color: $black;
+    font-size: 28px;
+
 }
 
-#buy_btn {  
+#item_card_buy_btn {  
     background-color: greenyellow;
     box-shadow: 0px 4px 8px 4px rgba($color: $green_buy-btn, $alpha: 0.2);
     color: #000;
     font-weight: bold;
+    width: auto;
 }
 
-#buy_btn:hover {
+#item_card_buy_btn:hover {
     background-color: $hoverColor;
     box-shadow: 0px 4px 8px 4px rgba($color: $hoverColor, $alpha: 0.2);
     color: #000;
 }
 
-#info_btn {width: 40px;}
+#item_card_info_btn {width: 40px;}
 
 /* Start sidebar */
 .sidebar {
@@ -262,12 +282,12 @@ hr {
     margin: 0;
     display: flex;
     align-items: center;
-    border-bottom: 2px solid $bgColorPos2;
+    border-bottom: 2px solid $hrColor;
 }
 
 .sidebarSection h3 {
     display: inline-block;
-    color: $whiteColor;
+    color: $black;
     padding: 20px 10px 20px 20px;
     margin: 0;
 }
@@ -278,7 +298,7 @@ hr {
 }
 
 .sidebarSection p {
-    color: $whiteColor;
+    color: $black;
     font-size: 18px;
 }
 
@@ -292,28 +312,29 @@ hr {
 .sidebarItem {
     text-align: center;
     padding: 5px;
-    transition: 0.2s;
+    transition: .3s ease-out;
 }
 
 .sidebarItem a {
     text-decoration: none;
-    color: $whiteColor;
+    color: $black;
+    transition: .3s ease-out;
 }
 
-.sidebarItem a:hover {transition: 0.5s; color: $hoverColor;}
+.sidebarItem a:hover {transition: 0.3s ease-in; color: $hoverColor;}
 
 #sidebarHeader {
     justify-content: center;
 }
 
 #sidebarSection_price input[type=text] {
-    font-family: Montserrat, Arial, sans-serif;
+    font-family: SF Pro Display , Montserrat, Arial, sans-serif;
     text-align: center;
     width: 125px;
     margin: 10px;
     font-size: 15px;
     background-color: $bgColorPos2;
-    color: $whiteColor;
+    color: $inactiveColor;
     border: none;
     border-radius: 6px;
     height: 30px;
@@ -331,14 +352,14 @@ hr {
     padding: 0px 15px;
     font-size: 15px;
     background-color: $bgColorPos2;
-    color: $bgColorPos3;
+    color: $inactiveColor;
     border: none;
     border-radius: 6px;
     outline: none;
-    transition: 0.3s;  
+    transition: 0.3s ease-out;  
 }
 
-#floatSelection:focus {color: $whiteColor; transition: 0.5s;}
+#floatSelection:focus {color: $black; transition: 0.3s ease-in;}
 /* End sidebar */
 
 /* End content section */
@@ -349,15 +370,18 @@ hr {
 
 .footer {
     display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     margin: 10px;
     flex-direction: column;;
-    background-color: $bgColorPos3;
+    background-color: $bgColorPos1;
     border-radius: 15px;
     align-items: center;
 }
 
 .footer h1 {
-    color: $whiteColor;
+    color: $black;
 }
 
 .footer a {
@@ -390,7 +414,7 @@ hr {
     text-decoration: none;
     padding: 1rem 0rem;
     border-radius: 0;
-    transition: 0.2s ease;
+    transition: 0.3s ease-in-out;
 }
 
 .dropdown-menu {
@@ -407,12 +431,12 @@ hr {
 
 .menu li:hover .dropdown-menu {display: block;}
 
-.menu li:hover a {color: $whiteColor;}
+.menu li:hover a {color: $black;}
 
 .dropdown-menu li {margin: 0;}
 
 .dropdown-menu li a {
-    color: $whiteColor;
+    color: $black;
     font-size: 16px;
     display: block;
     padding: 0.5rem;

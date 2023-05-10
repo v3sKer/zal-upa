@@ -5,16 +5,11 @@ This is a website template for a CS:GO skin trading website. Please note that th
 ### Technologies Used
 
 - HTML/CSS
-- Bootstrap
 - SASS/SCSS
-
-### Getting Started
-
-To get started with this template, you will need a basic web server. Simply clone the repository and run it.
 
 ### Credits
 
-This template was created as a practice project for college by Daniil Vesker. The CS:GO skin images used in this template are property of Valve Corporation.
+The CS:GO skin images used in this template are property of Valve Corporation.
 
 ### Disclaimer
 

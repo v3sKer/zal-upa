@@ -1,12 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #dadada;
-  font-family: Montserrat, Arial, sans-serif;
+  background-color: #fff;
+  font-family: SF Pro Display, Montserrat, Arial, sans-serif;
+  font-size: 16px;
 }
 
-hr {
-  border-bottom: 2px solid gray;
+main {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Start header section */
@@ -27,7 +29,7 @@ hr {
   display: flex;
   justify-content: space-between;
   margin: 5px auto;
-  background-color: #2b2b2b;
+  background-color: #ececec;
   height: 70px;
   width: 850px;
   border-radius: 15px;
@@ -36,12 +38,12 @@ hr {
 #navbarLogo {
   width: 40px;
   height: 40px;
-  transition: 0.3s;
+  transition: 0.3s ease-out;
 }
 
 #navbarLogo:hover {
   scale: 110%;
-  transition: 0.5s;
+  transition: 0.3s ease-in;
 }
 
 .navbarButtonsLeft {
@@ -55,15 +57,15 @@ hr {
   margin: 0;
   padding: 10px;
   font-size: 18px;
-  color: #6e6e6e;
+  color: #bebebe;
   text-decoration: none;
   text-align: center;
-  transition: 0.3s;
+  transition: 0.3s ease-out;
 }
 
 .navbarItem:hover {
-  color: #F6F4F1;
-  transition: 0.5s;
+  color: #000;
+  transition: 0.3s ease-in;
 }
 
 .navbarSearch {
@@ -75,18 +77,20 @@ hr {
 
 .navbarSearch input[type=text] {
   width: 380px;
-  font-family: Montserrat, sans-serif;
+  font-family: SF Pro Display, Montserrat, sans-serif;
   font-size: 18px;
-  background-color: #494949;
-  color: #F6F4F1;
+  background-color: #d2d2d2;
+  color: #9e9e9e;
   padding: 14px 14px;
   border-radius: 8px;
   border: none;
   text-align: left;
+  transition: 0.3s ease-out;
 }
 
 .navbarSearch input:focus {
-  outline: 1px solid #6e6e6e;
+  outline: 1px solid #959595;
+  transition: 0.3s ease-in;
 }
 
 .navbarButtonsRight {
@@ -97,16 +101,17 @@ hr {
 }
 
 #navbarIcon i {
-  color: #6e6e6e;
+  color: #bebebe;
   scale: 170%;
   padding: 2px;
   margin: 5px;
-  transition: 0.3s;
+  transition: 0.3s ease-out;
   vertical-align: bottom;
 }
 
 #navbarIcon:hover i {
-  color: #F6F4F1;
+  color: #000;
+  transition: 0.3 ease-in;
 }
 
 /* End navbar section */
@@ -126,7 +131,7 @@ hr {
 .mainContent {
   display: flex;
   flex-direction: column;
-  background-color: #2b2b2b;
+  background-color: #ececec;
   width: 100%;
   margin: 10px;
   border-radius: 15px;
@@ -135,7 +140,7 @@ hr {
 #mainContent_header {
   display: flex;
   justify-content: center;
-  border-bottom: 2px solid #494949;
+  border-bottom: 2px solid #d2d2d2;
 }
 
 #mainContent_container {
@@ -144,102 +149,117 @@ hr {
 
 #mainContent_row {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
-  margin: 10px 10px 0px 1 0px;
 }
 
-.item {
+.item_card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 10px;
   border-radius: 12px;
-  background-color: #6e6e6e;
-  transition: 0.2s;
+  background-color: #fff;
+  transition: 0.3s ease-out;
 }
 
-.item:hover img {
-  scale: 105%;
-  transition: 0.5s;
+.item_card:hover img {
+  scale: 110%;
+  transition: 0.3s ease-in;
 }
 
-.item h4, h2 {
-  color: #F6F4F1;
-  margin: 15px;
+.item_card h5 {
+  color: #bebebe;
+  margin: 15px 0 0 15px;
+  font-style: normal;
 }
 
-.item h4 {
-  font-weight: normal;
+.item_card h4 {
+  color: #000;
+  margin: 15px 0 0 15px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-.item hr {
-  border: 1px solid #494949;
+.item_card h2 {
+  color: #000;
+  margin: 15px 0 0 15px;
 }
 
-.item_image {
-  background-color: #494949;
+.item_card hr {
+  border: 1px solid #d2d2d2;
+}
+
+.item_card_image {
+  background-color: #d2d2d2;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  border-bottom: 3px solid #66c0f4;
+  border-bottom: 3px solid #cacaca;
   display: flex;
   justify-content: center;
 }
 
-.item_image img {
-  width: 95%;
-  transition: 0.2s;
+.item_card_image img {
+  width: 65%;
+  transition: 0.3s ease-in-out;
   padding: 10px 10px;
 }
 
-.item_btn {
+.item_card_btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
   height: 25px;
   border-radius: 5px;
   text-decoration: none;
-  color: #F6F4F1;
+  color: #000;
   margin: 5px;
-  padding: 5px;
-  background-color: #494949;
-  box-shadow: 0px 3px 3px 5px rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  background-color: #d2d2d2;
+  box-shadow: 0px 3px 3px 2px rgba(0, 0, 0, 0.05);
   text-align: center;
-  transition: 0.2s;
+  transition: 0.3s ease-out;
 }
 
-.item_btn:hover {
-  background-color: #66c0f4;
-  transition: 0.5s;
-  box-shadow: 0px 3px 3px 5px rgba(102, 192, 244, 0.05);
+.item_card_btn:hover {
+  background-color: #00aaff;
+  transition: 0.3s ease-in;
+  box-shadow: 0px 3px 3px 5px rgba(0, 170, 255, 0.05);
   color: #000;
 }
 
-#item_buttons {
+.item_card_btn i {
+  scale: 150%;
+  padding: 5px;
+}
+
+#item_card_buttons {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin: 5px 0;
+  margin: 5px;
 }
 
-#price {
-  color: #0ed50e;
+#item_card_price {
+  color: #000;
+  font-size: 28px;
 }
 
-#buy_btn {
+#item_card_buy_btn {
   background-color: greenyellow;
   box-shadow: 0px 4px 8px 4px rgba(173, 255, 47, 0.2);
   color: #000;
   font-weight: bold;
+  width: auto;
 }
 
-#buy_btn:hover {
-  background-color: #66c0f4;
-  box-shadow: 0px 4px 8px 4px rgba(102, 192, 244, 0.2);
+#item_card_buy_btn:hover {
+  background-color: #00aaff;
+  box-shadow: 0px 4px 8px 4px rgba(0, 170, 255, 0.2);
   color: #000;
 }
 
-#info_btn {
+#item_card_info_btn {
   width: 40px;
 }
 
@@ -251,7 +271,7 @@ hr {
   border-radius: 15px;
   width: 410px;
   height: auto;
-  background-color: #2b2b2b;
+  background-color: #ececec;
   padding: 20px 0px;
 }
 
@@ -259,23 +279,23 @@ hr {
   margin: 0;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid #494949;
+  border-bottom: 2px solid #cacaca;
 }
 
 .sidebarSection h3 {
   display: inline-block;
-  color: #F6F4F1;
+  color: #000;
   padding: 20px 10px 20px 20px;
   margin: 0;
 }
 
 .sidebarSection i {
   scale: 200%;
-  color: #6e6e6e;
+  color: #bebebe;
 }
 
 .sidebarSection p {
-  color: #F6F4F1;
+  color: #000;
   font-size: 18px;
 }
 
@@ -289,17 +309,18 @@ hr {
 .sidebarItem {
   text-align: center;
   padding: 5px;
-  transition: 0.2s;
+  transition: 0.3s ease-out;
 }
 
 .sidebarItem a {
   text-decoration: none;
-  color: #F6F4F1;
+  color: #000;
+  transition: 0.3s ease-out;
 }
 
 .sidebarItem a:hover {
-  transition: 0.5s;
-  color: #66c0f4;
+  transition: 0.3s ease-in;
+  color: #00aaff;
 }
 
 #sidebarHeader {
@@ -307,13 +328,13 @@ hr {
 }
 
 #sidebarSection_price input[type=text] {
-  font-family: Montserrat, Arial, sans-serif;
+  font-family: SF Pro Display, Montserrat, Arial, sans-serif;
   text-align: center;
   width: 125px;
   margin: 10px;
   font-size: 15px;
-  background-color: #494949;
-  color: #F6F4F1;
+  background-color: #d2d2d2;
+  color: #9e9e9e;
   border: none;
   border-radius: 6px;
   height: 30px;
@@ -330,17 +351,17 @@ hr {
   margin: 10px;
   padding: 0px 15px;
   font-size: 15px;
-  background-color: #494949;
-  color: #6e6e6e;
+  background-color: #d2d2d2;
+  color: #9e9e9e;
   border: none;
   border-radius: 6px;
   outline: none;
-  transition: 0.3s;
+  transition: 0.3s ease-out;
 }
 
 #floatSelection:focus {
-  color: #F6F4F1;
-  transition: 0.5s;
+  color: #000;
+  transition: 0.3s ease-in;
 }
 
 /* End sidebar */
@@ -349,21 +370,24 @@ hr {
 /* Start footer section */
 .footer {
   display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   margin: 10px;
   flex-direction: column;
-  background-color: #6e6e6e;
+  background-color: #ececec;
   border-radius: 15px;
   align-items: center;
 }
 
 .footer h1 {
-  color: #F6F4F1;
+  color: #000;
 }
 
 .footer a {
   font-weight: bold;
   text-decoration: none;
-  color: #66c0f4;
+  color: #00aaff;
 }
 
 /* End footer section */
@@ -383,11 +407,11 @@ hr {
 }
 
 .menu li a {
-  color: #6e6e6e;
+  color: #bebebe;
   text-decoration: none;
   padding: 1rem 0rem;
   border-radius: 0;
-  transition: 0.2s ease;
+  transition: 0.3s ease-in-out;
 }
 
 .dropdown-menu {
@@ -395,7 +419,7 @@ hr {
   display: none;
   position: absolute;
   z-index: 1;
-  background-color: #2b2b2b;
+  background-color: #ececec;
   box-shadow: 0px 10px 10px 6px rgba(0, 0, 0, 0.15);
   padding: 0.5rem;
   margin-top: 0.5rem;
@@ -407,7 +431,7 @@ hr {
 }
 
 .menu li:hover a {
-  color: #F6F4F1;
+  color: #000;
 }
 
 .dropdown-menu li {
@@ -415,7 +439,7 @@ hr {
 }
 
 .dropdown-menu li a {
-  color: #F6F4F1;
+  color: #000;
   font-size: 16px;
   display: block;
   padding: 0.5rem;
@@ -424,7 +448,7 @@ hr {
 }
 
 .dropdown-menu li a:hover {
-  color: #66c0f4;
+  color: #00aaff;
 }
 
 /* End modules section */
